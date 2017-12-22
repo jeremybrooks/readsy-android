@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/itemDropbox"
+        android:showAsAction="always"
+        android:onClick="menuItemDropboxClicked"
+        android:title="@string/net.jeremybrooks.readsy.menuDropboxConnect">
+    </item>
+    <item
+        android:id="@+id/itemFont"
+        android:showAsAction="always"
+        android:onClick="menuItemFontClicked"
+        android:title="@string/net.jeremybrooks.readsy.menuFont">
+    </item>
+    <item
+        android:id="@+id/itemHelp"
+        android:showAsAction="always"
+        android:onClick="menuItemHelpClicked"
+        android:title="@string/net.jeremybrooks.readsy.menuHelp">
+    </item>
+</menu>

@@ -1,0 +1,76 @@
+<resources>
+    <string name="app_name">readsy</string>
+    <!--<string name="app_key">8gzhpz0fcmrv0fe</string>-->
+
+    <!-- dialog boxes -->
+    <string name="net.jeremybrooks.readsy.welcomeTitle">Welcome!</string>
+    <string name="net.jeremybrooks.readsy.welcomeMessage">To get started, tap the menu button and select "Connect Dropbox"</string>
+
+    <!-- menus -->
+    <string name="net.jeremybrooks.readsy.menuFont">Font</string>
+    <string name="net.jeremybrooks.readsy.menuDropboxConnect">Connect Dropbox</string>
+    <string name="net.jeremybrooks.readsy.menuDropboxDisconnect">Disconnect Dropbox</string>
+    <string name="net.jeremybrooks.readsy.menuHelp">Help</string>
+
+    <!-- main view -->
+    <string name="net.jeremybrooks.readsy.mainTitle">Library</string>
+    <string name="net.jeremybrooks.readsy.upToDate">You are all up to date!</string>
+    <string name="net.jeremybrooks.readsy.nothingThisYear">Nothing to read this year.</string>
+    <string name="net.jeremybrooks.readsy.unreadItem">There is %d unread item.</string>
+    <string name="net.jeremybrooks.readsy.unreadItems">There are %d unread items.</string>
+
+    <!-- content view -->
+    <string name="net.jeremybrooks.readsy.iveReadIt">I\'ve read it</string>
+    <string name="net.jeremybrooks.readsy.loading">Loading...</string>
+    <string name="net.jeremybrooks.readsy.noEntryFound">No entry found for this date.</string>
+
+    <!-- dropbox activity -->
+    <string name="net.jeremybrooks.readsy.connectTitle">Connect to Dropbox</string>
+    <string name="net.jeremybrooks.readsy.dropboxDescription">Welcome to readsy!\n\nIt looks like readsy is not connected to your Dropbox yet. To get started, tap the Connect button.</string>
+    <string name="net.jeremybrooks.readsy.buttonConnect">Connect</string>
+
+    <!-- error messages -->
+    <string name="net.jeremybrooks.readsy.errorTitle">Error</string>
+    <string name="net.jeremybrooks.readsy.errorMessageBadToken">There was an error while trying to read the saved Dropbox token. Please connect to Dropbox again.</string>
+    <string name="net.jeremybrooks.readsy.errorMessageNoToken">There was an error retrieving the Dropbox token. Please connect to Dropbox again.</string>
+    <string name="net.jeremybrooks.readsy.errorMessageUpload">There was an error while trying to upload the change to Dropbox. Please try again later. The error message was \'%s\'.</string>
+    <string name="net.jeremybrooks.readsy.errorReadingSecrets">There was an error while trying to load the Dropbox API key: %s</string>
+
+    <!-- font -->
+    <string name="net.jeremybrooks.readsy.fontTitle">Font</string>
+    <string name="net.jeremybrooks.readsy.fontStyleLabel">Font Style</string>
+    <string name="net.jeremybrooks.readsy.fontSizeLabel">Font Size</string>
+    <string name="net.jeremybrooks.readsy.fontSample">This is just sample text.</string>
+    <string-array name="font_array">
+        <item>Normal</item>
+        <item>Serif</item>
+        <item>Monospace</item>
+    </string-array>
+    <string-array name="font_size_array">
+        <item>10</item>
+        <item>12</item>
+        <item>14</item>
+        <item>16</item>
+        <item>18</item>
+        <item>20</item>
+        <item>22</item>
+        <item>24</item>
+    </string-array>
+
+    <!-- help -->
+    <string name="net.jeremybrooks.readsy.helpTitle">Help</string>
+    <string name="net.jeremybrooks.readsy.help"><![CDATA[
+<p>readsy for Android</p>
+<p>readsy is designed to help you read something every day.</p>
+<p>The Library view will show the readsy data that is in your Dropbox. Tap a row to see the entry for that day.</p>
+<p>When viewing an entry, you can navigate to previous and next days by swiping left and right on the screen. To return to the current day\'s entry, shake the device.</p>
+<p>When you have read the entry for a day, tap the checkbox to mark it as read. The Library screen will let you know if you have any unread items.</p>
+<p>For more help, visit the readsy web site at <a href="http://jeremybrooks.net/readsy/faq.html">http://jeremybrooks.net/readsy/faq.html</a></p>
+<p>This is readsy for Android version ${version} (${versionCode})</p>
+<p>readsy uses the following libraries:
+<ul><li>dropbox-sdk-java by Dropbox, Inc.</li>
+<li>OkHttp by Square</li>
+</ul></p>
+<p>readsy is not affiliated with or otherwise sponsored by Dropbox, Inc.</p>
+    ]]></string>
+</resources>
