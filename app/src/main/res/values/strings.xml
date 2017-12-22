@@ -1,6 +1,5 @@
 <resources>
     <string name="app_name">readsy</string>
-    <!--<string name="app_key">8gzhpz0fcmrv0fe</string>-->
 
     <!-- dialog boxes -->
     <string name="net.jeremybrooks.readsy.welcomeTitle">Welcome!</string>
