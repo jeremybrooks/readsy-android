@@ -12,11 +12,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activites.MainActivity"
+        <activity
+            android:name=".activites.MainActivity"
             android:screenOrientation="portrait">
             android:launchMode="singleTask">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -28,7 +30,9 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".activites.MainActivity" />
         </activity>
-        <activity android:name=".activites.DropboxActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activites.DropboxActivity"
+            android:screenOrientation="portrait" />
         <activity
             android:name="com.dropbox.core.android.AuthActivity"
             android:configChanges="orientation|keyboard"
@@ -51,12 +55,20 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".activites.MainActivity" />
         </activity>
-        <activity android:name=".activites.FontActivity"
+        <activity
+            android:name=".activites.FontActivity"
             android:screenOrientation="portrait">
-        android:parentActivityName=".activites.MainActivity">
-        <meta-data
-            android:name="android.support.PARENT_ACTIVITY"
-            android:value=".activites.MainActivity" />
+            android:parentActivityName=".activites.MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activites.MainActivity" />
+        </activity>
+        <activity android:name=".activites.ShowStatusActivity"
+            android:parentActivityName=".activites.MainActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activites.MainActivity"/>
         </activity>
     </application>
 

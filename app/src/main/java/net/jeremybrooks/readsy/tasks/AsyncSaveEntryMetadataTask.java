@@ -7,8 +7,8 @@ import com.dropbox.core.v2.files.WriteMode;
 
 import net.jeremybrooks.readsy.DropboxHelper;
 import net.jeremybrooks.readsy.R;
-import net.jeremybrooks.readsy.activites.ShowContentActivity;
 import net.jeremybrooks.readsy.Utils;
+import net.jeremybrooks.readsy.activites.ReadsyActivity;
 
 import java.io.ByteArrayInputStream;
 import java.io.InputStream;
@@ -22,11 +22,11 @@ import java.util.Properties;
 
 public class AsyncSaveEntryMetadataTask extends AsyncTask<Void, Void, Boolean> {
 
-    private ShowContentActivity activity;
+    private ReadsyActivity activity;
     private Properties entryMetadata;
     private String errorMessage;
 
-    public AsyncSaveEntryMetadataTask(ShowContentActivity activity, Properties entryMetadata) {
+    public AsyncSaveEntryMetadataTask(ReadsyActivity activity, Properties entryMetadata) {
         this.activity = activity;
         this.entryMetadata = entryMetadata;
     }
@@ -69,8 +69,8 @@ public class AsyncSaveEntryMetadataTask extends AsyncTask<Void, Void, Boolean> {
     protected void onPostExecute(Boolean result) {
         this.activity.setBusy(false);
         if (!result) {
-            this.activity.showMessage(activity.getString(R.string.net_jeremybrooks_readsy_errorTitle),
-                    activity.getString(R.string.net_jeremybrooks_readsy_errorMessageUpload, errorMessage));
+            this.activity.showMessage(activity.getContext().getString(R.string.net_jeremybrooks_readsy_errorTitle),
+                    activity.getContext().getString(R.string.net_jeremybrooks_readsy_errorMessageUpload, errorMessage));
         }
     }
 

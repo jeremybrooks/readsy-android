@@ -40,7 +40,6 @@ public class FontActivity extends AppCompatActivity {
       }
     });
 
-    // todo set initial position of spinner
     SharedPreferences sharedPreferences = getSharedPreferences(Constants.SHARED_PREFS, Context.MODE_PRIVATE);
     String fontSize = sharedPreferences.getString(Constants.KEY_FONT_SIZE, "14");
     Adapter adapter = sizeSpinner.getAdapter();

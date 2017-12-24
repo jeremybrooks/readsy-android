@@ -1,6 +1,7 @@
 package net.jeremybrooks.readsy.activites;
 
 import android.content.SharedPreferences;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
@@ -54,7 +55,12 @@ public class DropboxActivity extends AppCompatActivity {
                     prefs.edit().putString(Constants.KEY_ACCESS_TOKEN, accessToken).apply();
                     finish(); // back to main, where we will init dropbox helper and load content
                 } else {
-                    AlertDialog.Builder builder = new AlertDialog.Builder(this);
+                    AlertDialog.Builder builder;
+                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+                        builder = new AlertDialog.Builder(this, android.R.style.Theme_Material_Dialog_Alert);
+                    } else {
+                        builder = new AlertDialog.Builder(this);
+                    }
                     builder.setTitle(getString(R.string.net_jeremybrooks_readsy_errorTitle))
                             .setMessage(getString(R.string.net_jeremybrooks_readsy_errorMessageNoToken))
                             .setNeutralButton(android.R.string.ok, null)

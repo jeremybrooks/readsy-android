@@ -36,8 +36,6 @@ public class MainListViewAdapter extends ArrayAdapter<Properties> {
 
         TextView secondLine = rowView.findViewById(R.id.secondLine);
         BitHelper bitHelper = new BitHelper(p.getProperty("read"));
-        System.out.println(p.getProperty("read"));
-        System.out.println(bitHelper.isRead(new Date()));
         Date today = new Date();
         if (p.getProperty("year").equals("0") ||
                 yearFormat.format(today).equals(p.getProperty("year"))) {

@@ -2,9 +2,13 @@ package net.jeremybrooks.readsy;
 
 import org.junit.Test;
 
+import java.util.Calendar;
 import java.util.Date;
+import java.util.GregorianCalendar;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
 
 /**
  * Created by jeremyb on 10/9/17.
@@ -37,7 +41,24 @@ public class BitHelperTest {
 
     @Test
     public void getUnreadItemCount() throws Exception {
+        // this bit pattern is all days read up to dec 22, so there should be 9 unread days
+        BitHelper bitHelper = new BitHelper("ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff0f00");
+        GregorianCalendar dec31 = new GregorianCalendar();
+        dec31.set(GregorianCalendar.YEAR, 2017);
+        int currentDayOfYear = dec31.get(Calendar.DAY_OF_YEAR);
+        dec31.set(GregorianCalendar.MONTH, GregorianCalendar.DECEMBER);
+        dec31.set(GregorianCalendar.DAY_OF_MONTH, 31);
+        assertEquals(9, bitHelper.getUnreadItemCount(dec31.getTime(), "2017"));
 
+        int unread = bitHelper.getUnreadItemCount(dec31.getTime(), "2017");
+        float daysInYear = (float)dec31.get(Calendar.DAY_OF_YEAR);
+        float read = daysInYear - unread;
+        int pct = (int)((daysInYear - unread)/daysInYear*100);
+
+        System.out.println(daysInYear - currentDayOfYear);
+        int percentTarget = (int)((daysInYear - (daysInYear - currentDayOfYear))/daysInYear*100);
+        System.out.println(pct);
+        System.out.println(percentTarget);
     }
 
 

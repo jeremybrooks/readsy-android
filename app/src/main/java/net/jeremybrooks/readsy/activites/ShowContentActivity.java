@@ -6,6 +6,7 @@ import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
@@ -33,7 +34,7 @@ import java.util.Locale;
 import java.util.Map;
 import java.util.Properties;
 
-public class ShowContentActivity extends AppCompatActivity implements View.OnClickListener {
+public class ShowContentActivity extends AppCompatActivity implements View.OnClickListener, ReadsyActivity {
     // gesture/motion constants
     private static final int SWIPE_MAX_OFF_PATH = 30;
     private static final int SWIPE_MIN_DISTANCE = 150;
@@ -191,7 +192,12 @@ public class ShowContentActivity extends AppCompatActivity implements View.OnCli
      * @param message the message for the dialog.
      */
     public void showMessage(String title, String message) {
-        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        AlertDialog.Builder builder;
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            builder = new AlertDialog.Builder(this, android.R.style.Theme_Material_Dialog_Alert);
+        } else {
+            builder = new AlertDialog.Builder(this);
+        }
         builder.setTitle(title)
                 .setMessage(message)
                 .setNeutralButton(android.R.string.ok, null)
@@ -268,4 +274,7 @@ public class ShowContentActivity extends AppCompatActivity implements View.OnCli
         super.onPause();
     }
 
+    public Context getContext() {
+        return this;
+    }
 }

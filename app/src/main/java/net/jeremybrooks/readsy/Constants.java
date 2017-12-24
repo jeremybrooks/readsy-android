@@ -20,5 +20,6 @@ public class Constants {
     public static final String METADATA_DESCRIPTION = "description";
     public static final String METADATA_KEY_SHORT_DESCRIPTION = "shortDescription";
     public static final String METADATA_KEY_READ = "read";
+    public static final String METADATA_KEY_VERSION = "version";
 
 }
