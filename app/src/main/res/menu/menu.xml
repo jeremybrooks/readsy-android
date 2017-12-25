@@ -35,12 +35,12 @@
         android:onClick="menuItemFontClicked"
         android:title="@string/net.jeremybrooks.readsy.menuFont">
     </item>
-    <item
-        android:id="@+id/itemReset"
-        android:showAsAction="always"
-        android:onClick="menuItemResetClicked"
-        android:title="@string/net.jeremybrooks.readsy.menuReset">
-    </item>
+    <!--<item-->
+        <!--android:id="@+id/itemReset"-->
+        <!--android:showAsAction="always"-->
+        <!--android:onClick="menuItemResetClicked"-->
+        <!--android:title="@string/net.jeremybrooks.readsy.menuReset">-->
+    <!--</item>-->
     <item
         android:id="@+id/itemHelp"
         android:showAsAction="always"

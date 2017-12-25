@@ -53,7 +53,7 @@ public class AsyncFindContentTask extends AsyncTask<Void, Void, List<Properties>
 
     protected void onPreExecute() {
         this.mainActivity.setBusy(true);
-        this.mainActivity.updateList(new ArrayList<Properties>());
+        this.mainActivity.updateList(null);
         this.mainActivity.showToast("Getting content from Dropbox...");
     }
 

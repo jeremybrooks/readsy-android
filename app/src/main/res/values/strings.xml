@@ -22,10 +22,8 @@
 
 <resources>
     <string name="app_name">readsy</string>
-
-    <!-- dialog boxes -->
-    <string name="net.jeremybrooks.readsy.welcomeTitle">Welcome!</string>
-    <string name="net.jeremybrooks.readsy.welcomeMessage">To get started, tap the menu button and select "Connect Dropbox"</string>
+    <string name="net.jeremybrooks.readsy.noContent_title">No Content</string>
+    <string name="net.jeremybrooks.readsy.noContent_message">It looks like you don\'t have any content in your Dropbox. To find some things to read, visit jeremybrooks.net/readsy.</string>
 
     <!-- menus -->
     <string name="net.jeremybrooks.readsy.menuFont">Font</string>

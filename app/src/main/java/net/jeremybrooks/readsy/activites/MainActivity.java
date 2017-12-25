@@ -43,6 +43,7 @@ import net.jeremybrooks.readsy.MainListViewAdapter;
 import net.jeremybrooks.readsy.R;
 import net.jeremybrooks.readsy.tasks.AsyncFindContentTask;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Properties;
 
@@ -133,6 +134,7 @@ public class MainActivity extends AppCompatActivity {
 
   @Override
   public boolean onPrepareOptionsMenu(Menu menu) {
+    super.onPrepareOptionsMenu(menu);
     MenuItem item = menu.findItem(R.id.itemDropbox);
     if (item != null) {
       SharedPreferences preferences = getSharedPreferences(Constants.SHARED_PREFS, Context.MODE_PRIVATE);
@@ -215,9 +217,17 @@ public class MainActivity extends AppCompatActivity {
    * @param list list of properties to display.
    */
   public void updateList(List<Properties> list) {
-    MainListViewAdapter adapter = new MainListViewAdapter(this, list);
-    ListView listView = (ListView) findViewById(R.id.listView);
+    MainListViewAdapter adapter;
+    if (list == null) {
+      adapter = new MainListViewAdapter(this, new ArrayList<Properties>());
+    } else {
+      adapter = new MainListViewAdapter(this, list);
+    }
+    ListView listView = findViewById(R.id.listView);
     listView.setAdapter(adapter);
+    if (list != null && list.size() == 0) {
+      showMessage(getString(R.string.net_jeremybrooks_readsy_noContent_title), getString(R.string.net_jeremybrooks_readsy_noContent_message));
+    }
   }
 
   /**
