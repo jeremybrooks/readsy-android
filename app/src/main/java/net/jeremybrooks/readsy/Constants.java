@@ -32,9 +32,8 @@ public class Constants {
 
     public static final String KEY_ACCESS_TOKEN = "net.jeremybrooks.readsy.access_token";
     public static final String KEY_DROPBOX_KEY = "dropbox.appKey";
-    public static final String KEY_DROPBOX_SECRET = "dropbox.appSecret";
 
-    public static final String KEY_WELCOME_SHOWN = "net.jeremybrooks.readsy.WELCOME_SHOWN";
+    public static final String KEY_TIP_WELCOME_SHOWN = "net.jeremybrooks.readsy.WELCOME_SHOWN";
 
     public static final String INTENT_MESSAGE_CONTENT_PROPERTIES = "net.jeremybrooks.readsy.CONTENT_PROPERTIES";
 

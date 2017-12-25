@@ -79,14 +79,6 @@ public class MainActivity extends AppCompatActivity {
       }
     });
 
-    Properties properties = new Properties();
-    try {
-      properties.load(getResources().openRawResource(R.raw.secrets));
-    } catch (Exception e) {
-      showMessage(getString(R.string.net_jeremybrooks_readsy_errorTitle),
-              getString(R.string.net_jeremybrooks_readsy_errorReadingSecrets, e.getMessage()));
-    }
-
     // set up some preferences if needed
     final SharedPreferences preferences = getSharedPreferences(Constants.SHARED_PREFS, Context.MODE_PRIVATE);
     String fontSize = preferences.getString(Constants.KEY_FONT_SIZE, null);
@@ -185,10 +177,9 @@ public class MainActivity extends AppCompatActivity {
    * @param menuItem
    */
   public void menuItemResetClicked(MenuItem menuItem) {
-    // TODO implement in settings
     final SharedPreferences preferences = getSharedPreferences(Constants.SHARED_PREFS, Context.MODE_PRIVATE);
     SharedPreferences.Editor editor = preferences.edit();
-    editor.remove(Constants.KEY_WELCOME_SHOWN);
+    editor.remove(Constants.KEY_TIP_WELCOME_SHOWN);
     editor.apply();
   }
 

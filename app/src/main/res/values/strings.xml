@@ -32,6 +32,7 @@
     <string name="net.jeremybrooks.readsy.menuDropboxConnect">Connect Dropbox</string>
     <string name="net.jeremybrooks.readsy.menuDropboxDisconnect">Disconnect Dropbox</string>
     <string name="net.jeremybrooks.readsy.menuHelp">Help</string>
+    <string name="net.jeremybrooks.readsy.menuReset">Reset Tips</string>
 
     <!-- main view -->
     <string name="net.jeremybrooks.readsy.mainTitle">Library</string>

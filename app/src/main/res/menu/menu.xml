@@ -21,25 +21,30 @@
   ~
   -->
 
-<menu xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:android="http://schemas.android.com/apk/res/android" >
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
 
     <item
         android:id="@+id/itemDropbox"
+        android:showAsAction="always"
         android:onClick="menuItemDropboxClicked"
-        android:title="@string/net.jeremybrooks.readsy.menuDropboxConnect"
-        app:showAsAction="always">
+        android:title="@string/net.jeremybrooks.readsy.menuDropboxConnect">
     </item>
     <item
         android:id="@+id/itemFont"
+        android:showAsAction="always"
         android:onClick="menuItemFontClicked"
-        android:title="@string/net.jeremybrooks.readsy.menuFont"
-        app:showAsAction="always">
+        android:title="@string/net.jeremybrooks.readsy.menuFont">
+    </item>
+    <item
+        android:id="@+id/itemReset"
+        android:showAsAction="always"
+        android:onClick="menuItemResetClicked"
+        android:title="@string/net.jeremybrooks.readsy.menuReset">
     </item>
     <item
         android:id="@+id/itemHelp"
+        android:showAsAction="always"
         android:onClick="menuItemHelpClicked"
-        android:title="@string/net.jeremybrooks.readsy.menuHelp"
-        app:showAsAction="always">
+        android:title="@string/net.jeremybrooks.readsy.menuHelp">
     </item>
 </menu>
