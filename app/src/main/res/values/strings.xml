@@ -97,10 +97,10 @@
     <string name="net.jeremybrooks.readsy.help"><![CDATA[
 <p>readsy for Android</p>
 <p>readsy is designed to help you read something every day.</p>
+<p>Reading files need to be copied to the Apps/readsy folder in your Dropbox. For instructions on how to download and copy files to your Dropbox, visit <a href="http://jeremybrooks.net/readsy/faq.html">http://jeremybrooks.net/readsy/faq.html</a></p>
 <p>The Library view will show the readsy data that is in your Dropbox. Tap a row to see the entry for that day, or long press to see status and options.</p>
 <p>When viewing an entry, you can navigate to previous and next days by swiping left and right on the screen. To return to the current day\'s entry, shake the device.</p>
 <p>When you have read the entry for a day, tap the checkbox to mark it as read. The Library screen will let you know if you have any unread items.</p>
-<p>For more help, visit the readsy web site at <a href="http://jeremybrooks.net/readsy/faq.html">http://jeremybrooks.net/readsy/faq.html</a></p>
 <p>This is readsy for Android version ${version} (${versionCode})</p>
 <p>readsy uses the following libraries:
 <ul><li>dropbox-sdk-java by Dropbox, Inc.</li>
